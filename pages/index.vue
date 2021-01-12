@@ -4,7 +4,9 @@
       <h1 class="title">to-do</h1>
     </div>
     <div class="subtitle">
-      <h2>add your first to-do</h2>
+      <h2>
+        add your first to-do
+      </h2>
       <button class="button3" type="button" name="button" @click="allDone">
         <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="#4d4d4d" class="bi bi-card-checklist" viewBox="0 0 16 16">
           <path d="M14.5 3a.5.5 0 0 1 .5.5v9a.5.5 0 0 1-.5.5h-13a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h13zm-13-1A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h13a1.5 1.5 0 0 0 1.5-1.5v-9A1.5 1.5 0 0 0 14.5 2h-13z"/>
@@ -52,26 +54,29 @@ methods: {
   addTodo() {
     this.todos.push({
       title: this.newTodo,
-      done: false
-    });
-    this.newTodo = '';
-  },
+      done: false });
+
+      this.newTodo = '';
+    },
+
     removeTodo(todo: any) {
       const todoIndex = this.todos.indexOf(todo);
       this.todos.splice(todoIndex, 1);
-  },
+    },
+
     allDone() {
       this.todos.forEach(todo => {
         todo.done = true;
       })
     }
-}
-
+  }
 })
 
 </script>
+
 <style>
 
+/*Aware that there is probably a lot of unneeded code here but I'm too lazy to fix*/
 
 .list {
   list-style-type: none;
