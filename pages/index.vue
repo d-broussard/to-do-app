@@ -149,7 +149,7 @@ export default Vue.extend({
     },
 
     allDone() {
-      this.todos.forEach((todo: any) => {
+      _.forEach(this.todos, (todo: any) => {
         todo.done = true;
       });
     },
