@@ -167,6 +167,6 @@ export default Vue.extend({
 }
 
 .checkmark:checked {
-  background-color: rgb(231, 231, 231);
+  background-color: rgb(201, 201, 201);
 }
 </style>
